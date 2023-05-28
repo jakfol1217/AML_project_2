@@ -35,4 +35,10 @@ def get_spam_test_data(file, cv):
     X = cv.transform(spam_test)
     df = pd.DataFrame(X.toarray(),
                   columns=cv.get_feature_names_out())
-    return df, spam_test
+    return df
+
+def write_answer(filename, data):
+    with open(filename, 'w') as f:
+        f.write('JAKFOL\n')
+        for ans in data:
+            f.write(str(ans) + '\n')
