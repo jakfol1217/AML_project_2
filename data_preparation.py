@@ -42,3 +42,8 @@ def write_answer(filename, data):
         f.write('JAKFOL\n')
         for ans in data:
             f.write(str(ans) + '\n')
+
+def write_indices(filename, data):
+    with open(filename, 'w') as f:
+        f.write('JAKFOL\n')
+        f.write(data)
